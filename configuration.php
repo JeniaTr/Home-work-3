@@ -1,7 +1,7 @@
 <?php
 
 $configuration = array(
-    'database' => 'universitys',
+    'database' => 'university',
     'user' => 'jenia',
     'password' => '1q2w3e$R',
 );
