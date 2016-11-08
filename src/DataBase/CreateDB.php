@@ -11,7 +11,7 @@ class CreateDB implements DBInterface
         $this->user = $user;
         $this->pass = $pass;
         $this->dbname = $dbname;
-        $this->connect();
+//        $this->connect();
     }
 
 

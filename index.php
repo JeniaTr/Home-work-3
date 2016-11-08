@@ -3,23 +3,28 @@
 require_once __DIR__.'/vendor/autoload.php';
 require_once 'configuration.php';
 
-    use \CreateDB;
-
+//require_once __DIR__.'/src/DataBase/CreateDB.php';
+//require_once __DIR__.'/src/DataBase/DBInterface.php';
 // ($server, $user, $pass, $dbname )
 
-$db = new CreateDB(
-        $configuration['server'],
-        $configuration['database'],
-        $configuration['user'],
-        $configuration['password']
+
+     $configuration = array(
+        'server'=>'localhost',
+        'database' => 'university111',
+        'user' => 'jenia',
+        'password' => '1q2w3e$R',
     );
 
+    $db = new CreateDB(
+        $configuration['server'],
+        $configuration['user'],
+        $configuration['password'],
+        $configuration['database']
+    );
 
-/*
-    $names =  $db->select('*','names');
-    echo'<pre>';
-    print_r($names);
-    echo'</pre>';
-    //$db->insert('names', array('NULL','Влад'));
-    $db->closeConnection();
-*/
+    $db -> createDatabase();
+
+?>
+
+<h1>Add database</h1>
+
