@@ -1,12 +1,18 @@
 <?php
 
 require_once __DIR__.'/vendor/autoload.php';
-require_once __DIR__.'/db/DBInterface.php';
-require_once __DIR__.'/db/CreateDB.php.php';
 require_once 'configuration.php';
 
+    use \CreateDB;
 
-   $db = new CreateDB(SERVER,USER,PASS,DBNAME);
+// ($server, $user, $pass, $dbname )
+
+$db = new CreateDB(
+        $configuration['server'],
+        $configuration['database'],
+        $configuration['user'],
+        $configuration['password']
+    );
 
 
 /*

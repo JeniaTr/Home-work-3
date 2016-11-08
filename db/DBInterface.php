@@ -8,6 +8,6 @@
  */
 interface DBInterface
 {
-//public function createDatabase($dbName='geekhub');
+public function createDatabase($dbName='Univer');
 
 }
